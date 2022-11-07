@@ -1,6 +1,3 @@
-import withPlugins from 'next-compose-plugins'
-import withTM from 'next-transpile-modules'
-
 const isProd = process.env.NODE_ENV === 'production'
 
 /** @type {import('next').NextConfig} */
@@ -12,6 +9,10 @@ const nextConfig = {
   publicRuntimeConfig: {
     basePath: isProd ? '/use-exit-intent' : '',
     assetPrefix: isProd ? '/use-exit-intent/' : '',
+  },
+
+  experimental: {
+    transpilePackages: ['use-exit-intent'],
   },
 
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
@@ -27,4 +28,4 @@ const nextConfig = {
   },
 }
 
-export default withPlugins([withTM(['use-exit-intent'])], nextConfig)
+export default nextConfig

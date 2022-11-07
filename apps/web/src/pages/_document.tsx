@@ -1,5 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
+import { getPublicPath } from 'shared/utils'
 import { getCssText } from 'styles'
 
 export default class CustomDocument extends Document {
@@ -11,7 +12,7 @@ export default class CustomDocument extends Document {
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href={getPublicPath('/favicon.ico')} />
 
           <link
             rel="preconnect"

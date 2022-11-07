@@ -1,3 +1,4 @@
+import { getPublicPath } from 'shared/utils'
 import { library } from './library'
 
 export const meta = {
@@ -9,7 +10,7 @@ export const meta = {
   },
 
   image: {
-    url: `/social.png`,
+    url: getPublicPath(`/social.png`),
     width: '1200',
     height: '630',
   },

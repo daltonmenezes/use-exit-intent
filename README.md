@@ -44,8 +44,8 @@ yarn add use-exit-intent
 npm i use-exit-intent
 ```
 # 🐠 Knowledge
-- [Docs](https://daltonmenezes.github.io/use-exint-intent/docs/getting-started/overview)
-- [Playground](https://daltonmenezes.github.io/use-exint-intent/#playground)
+- [Docs](https://daltonmenezes.github.io/use-exit-intent/docs/getting-started/overview)
+- [Playground](https://daltonmenezes.github.io/use-exit-intent/#playground)
 
 
 # 🐠 Contributing
