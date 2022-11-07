@@ -1,0 +1,40 @@
+---
+title: desktop
+---
+
+# desktop
+
+**desktop** is an object with the following properties:
+
+<br/>
+
+- **triggerOnIdle** - if true, the handlers will be triggered when the user is idle
+- **triggerOnMouseLeave** - if true, the handlers will be triggered when the user is about to leave your website
+- **delayInSecondsToTrigger** - delay in seconds to trigger the exit intent handlers. **triggerOnIdle** **must be true**!
+- **useBeforeUnload** - if true, the handlers will be triggered when the user is about to leave your website. **UI will be blocked until the user cancels the action**.
+
+<br/>
+
+## Default
+```tsx
+delayInSecondsToTrigger: 10
+triggerOnMouseLeave: true
+triggerOnIdle: false
+useBeforeUnload: false
+```
+
+<br />
+
+## Example
+```tsx
+useExitIntent({
+  desktop: {
+    delayInSecondsToTrigger: 10,
+    triggerOnMouseLeave: true,
+    triggerOnIdle: false
+    useBeforeUnload: false
+  }
+})
+```
+
+

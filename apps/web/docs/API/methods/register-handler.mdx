@@ -1,0 +1,60 @@
+---
+title: registerHandler
+order: 1
+---
+
+# registerHandler
+
+A function that registers a handler to be triggered when the exit intent is
+detected.
+
+## Params
+- **id:** string **(required)**
+- **handler:** Function **(required)**
+- **context:** Array **(optional)**
+  - onTrigger
+  - onUnsubscribe
+  - onDesktop
+  - onMobile
+
+<br />
+
+By default, the handler will be triggered on desktop and mobile devices and
+you can omit the context parameter, but if you would like to specify the
+context where the handler should be triggered, you can pass an array of the
+following values as necessary:
+
+<br />
+
+- **onTrigger** - triggers the handler when the exit intent is
+detected
+- **onUnsubscribe** - triggers the handler when the user
+unsubscribes from the exit intent
+- **onDesktop** - triggers the handler on desktop devices
+- **onMobile** - triggers the handler on mobile devices
+
+<br />
+
+## Example
+```tsx
+const { registerHandler } = useExitIntent()
+
+// This handler will be triggered on desktop and mobile
+registerHandler({
+  id: 'myHandlerId',
+  handler: () => {
+    console.log('Exit intent triggered!')
+  }
+})
+
+// This handler will be triggered only on mobile
+registerHandler({
+  id: 'mySecondHandlerId',
+  handler: () => {
+    console.log('Hello from Mobile!')
+  },
+  context: ['onMobile']
+})
+```
+
+

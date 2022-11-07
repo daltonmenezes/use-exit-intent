@@ -1,0 +1,43 @@
+---
+title: Installation
+order: 2
+---
+
+# Installation
+
+### yarn
+
+```bash
+yarn add use-exit-intent
+```
+
+### npm
+```bash
+npm i use-exit-intent
+```
+
+<br/><br/>
+
+## Importing
+```tsx
+import { useExitIntent } from 'use-exit-intent'
+```
+
+## Using
+
+In your React component:
+
+<br />
+
+```tsx
+export function App() {
+  const { registerHandler } = useExitIntent()
+
+  registerHandler({
+    id: 'openModal',
+    handler: () => console.log('Hello from handler!')
+  })
+
+  // ...
+}
+```

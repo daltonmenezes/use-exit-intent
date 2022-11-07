@@ -1,0 +1,22 @@
+---
+title: unsubscribe
+order: 2
+---
+
+# unsubscribe
+
+A function that unsubscribes the user from the exit intent. The verification
+persistance use cookies to avoid the user from seeing the exit intent again
+until the cookie expires.
+
+<br />
+
+## Example
+
+```tsx
+const { unsubscribe } = useExitIntent()
+
+function handleUnsubscription() {
+  unsubscribe()
+}
+```

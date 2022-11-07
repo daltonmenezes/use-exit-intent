@@ -1,0 +1,34 @@
+---
+title: mobile
+---
+
+# mobile
+
+**mobile** is an object with the following properties:
+
+<br/>
+
+- **delayInSecondsToTrigger** - delay in seconds to trigger the exit intent handlers
+- **triggerOnIdle** - if true, the exit intent handlers will be triggered when the user is idle
+
+<br/>
+
+## Default
+```tsx
+delayInSecondsToTrigger: 10
+triggerOnIdle: true
+```
+
+<br />
+
+## Example
+```tsx
+useExitIntent({
+  mobile: {
+    delayInSecondsToTrigger: 10,
+    triggerOnIdle: true
+  }
+})
+```
+
+

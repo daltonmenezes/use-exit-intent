@@ -1,0 +1,65 @@
+{
+  "name": "use-exit-intent",
+  "version": "1.0.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "description": "A React Hook to handle exit intent strategies",
+  "author": {
+    "name": "Dalton Menezes",
+    "email": "daltonmenezes@outlook.com",
+    "url": "https://daltonmenezes.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daltonmenezes/use-exit-intent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/daltonmenezes/use-exit-intent/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "predev": "tsc",
+    "dev": "rollup -c -w",
+    "prebuild": "tsc",
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@daltonmenezes/eslint-config": "*",
+    "@daltonmenezes/ts-config": "*",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@types/js-cookie": "^3.0.2",
+    "@types/node": "^18.7.18",
+    "@types/react": "^18.0.20",
+    "esbuild": "^0.15.8",
+    "react": "^18.2.0",
+    "rollup": "^2.79.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-esbuild": "^4.10.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.3"
+  },
+  "peerDependencies": {
+    "react": ">=17.0"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "exit intent"
+  ],
+  "eslintIgnore": [
+    ".next",
+    "out"
+  ],
+  "dependencies": {
+    "js-cookie": "^3.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

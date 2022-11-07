@@ -1,73 +1,64 @@
-# Turborepo starter
+<p align="center">
+  <a href="#use-exit-intent">
+    <img alt="preview" src="./apps/web/public/banner.svg" width="100%">
+  </a>
+</p>
 
-This is an official Yarn v1 starter turborepo.
+<h3 align="center"><strong>useExitIntent</strong>: 🐠 A React Hook to handle exit intent strategies</h3>
 
-## What's inside?
+<p align="center">
+  <!-- GitHub -->
+  <a href="https://github.com/sponsors/daltonmenezes">
+    <img alt="github url" src="https://img.shields.io/badge/support%20on-github-1C1E26?style=for-the-badge&labelColor=1C1E26&color=646cff"/>
+  </a>
+  <!-- Patreon -->
+  <a href="https://www.patreon.com/daltonmenezes">
+    <img alt="patreon url" src="https://img.shields.io/badge/support%20on-patreon-1C1E26?style=for-the-badge&labelColor=1C1E26&color=646cff"/>
+  </a>
+  <!-- Version -->
+  <a href="https://github.com/daltonmenezes/use-exit-intent/releases">
+     <img alt="releases url" src="https://img.shields.io/npm/v/use-exit-intent.svg?style=for-the-badge&labelColor=1C1E26&color=646cff"/>
+  </a>  
+  <!-- License -->
+  <a href="https://github.com/daltonmenezes/use-exit-intent/blob/main/LICENSE">
+    <img alt="license url" src="https://img.shields.io/badge/license%20-MIT-1C1E26?style=for-the-badge&labelColor=1C1E26&color=646cff"/>
+  </a>
+</p>
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. It includes the following packages/apps:
+> The Exit Intent strategy is a great way to increase your conversion rate. That strategy is commonly used to show a modal/popup when the user is about to leave your website.
 
-### Apps and Packages
+# 🐠 Features
+- 🚀 Multiple handlers can be registred
+- 🔥 Highly configurable
+- 🧠 Different strategies for Desktop and Mobile
+- ⛔️ Unsubscription support with cookies
+- 🎉 Built with TypeScript
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+# 🐠 Installation
+In your terminal, run:
+```bash
+yarn add use-exit-intent
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+# OR
 
-### Utilities
-
-This turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
+npm i use-exit-intent
 ```
-cd my-turborepo
-yarn run build
-```
+# 🐠 Knowledge
+- [Docs](https://daltonmenezes.github.io/use-exint-intent/docs/getting-started/overview)
+- [Playground](https://daltonmenezes.github.io/use-exint-intent/#playground)
 
-### Develop
 
-To develop all apps and packages, run the following command:
+# 🐠 Contributing
+> **Note**: contributions are always welcome, but always **ask first**, — please — before work on a PR.
 
-```
-cd my-turborepo
-yarn run dev
-```
+That said, there's a bunch of ways you can contribute to this project, like by:
 
-### Remote Caching
+- :beetle: Reporting a bug
+- :page_facing_up: Improving this documentation
+- :rotating_light: Sharing this project and recommending it to your friends
+- :dollar: Supporting this project on GitHub Sponsors or Patreon
+- :star2: Giving a star on this repository
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+# License
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
-- [Caching](https://turborepo.org/docs/core-concepts/caching)
-- [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+[MIT © Dalton Menezes](https://github.com/daltonmenezes/use-exit-intent/blob/main/LICENSE)

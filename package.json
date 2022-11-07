@@ -10,10 +10,18 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=!web && changeset publish"
   },
   "devDependencies": {
-    "eslint-config-custom": "*",
+    "@changesets/cli": "^2.25.0",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
     "prettier": "latest",
     "turbo": "latest"
   },
@@ -21,5 +29,13 @@
     "node": ">=14.0.0"
   },
   "dependencies": {},
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "lint-staged": {
+    "./apps/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "./packages/use-exit-intent/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ]
+  }
 }

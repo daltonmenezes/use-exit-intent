@@ -1,0 +1,28 @@
+---
+title: updateSettings
+---
+
+# updateSettings
+
+A function that updates the exit intent settings.
+
+## Params
+- **settings:** Object **(required)**
+
+<br />
+
+## Example
+```tsx
+const { updateSettings } = useExitIntent()
+
+function handleUpdateSettings() {
+  updateSettings({
+    cookie: {
+      key: 'exit-intent',
+      daysToExpire: 30
+    }
+  })
+}
+```
+
+
