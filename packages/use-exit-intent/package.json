@@ -1,6 +1,6 @@
 {
   "name": "use-exit-intent",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -25,7 +25,8 @@
     "predev": "tsc",
     "dev": "rollup -c -w",
     "prebuild": "tsc",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepack": "cp ../../README.md ./README.md"
   },
   "devDependencies": {
     "@daltonmenezes/eslint-config": "*",

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#use-exit-intent">
-    <img alt="preview" src="./apps/web/public/banner.svg" width="100%">
+    <img alt="preview" src="https://github.com/daltonmenezes/use-exit-intent/raw/main/apps/web/public/banner.svg" width="100%">
   </a>
 </p>
 
@@ -43,6 +43,26 @@ yarn add use-exit-intent
 
 npm i use-exit-intent
 ```
+
+# 🐠 Usage
+
+In your React component:
+
+```tsx
+import { useExitIntent } from 'use-exit-intent'
+
+export function App() {
+  const { registerHandler } = useExitIntent()
+
+  registerHandler({
+    id: 'openModal',
+    handler: () => console.log('Hello from handler!')
+  })
+
+  // ...
+}
+```
+
 # 🐠 Knowledge
 - [Docs](https://daltonmenezes.github.io/use-exit-intent/docs/getting-started/overview)
 - [Playground](https://daltonmenezes.github.io/use-exit-intent/#playground)

@@ -1,5 +1,11 @@
 # use-exit-intent
 
+## 1.0.5
+
+### Patch Changes
+
+- docs: add usage example
+
 ## 1.0.4
 
 ### Patch Changes
