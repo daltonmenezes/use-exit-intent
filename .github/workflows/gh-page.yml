@@ -43,12 +43,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "18"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           static_site_generator: next
           generator_config_file: ./apps/web/next.config.mjs
 
