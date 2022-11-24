@@ -69,7 +69,10 @@ export function useExitIntent(props: ExitIntentSettings | void = {}) {
   }, [])
 
   const unsubscribe = useCallback(() => {
-    Cookies.set(cookie.key, 'true', { expires: cookie.daysToExpire })
+    Cookies.set(cookie.key, 'true', {
+      expires: cookie.daysToExpire,
+      sameSite: 'Strict',
+    })
 
     handlers
       .filter((handler) => handler.context?.includes(contexts.onUnsubscribe))
@@ -79,7 +82,7 @@ export function useExitIntent(props: ExitIntentSettings | void = {}) {
   }, [cookie?.key])
 
   const resetState = useCallback(() => {
-    Cookies.remove(cookie?.key)
+    Cookies.remove(cookie?.key, { sameSite: 'Strict' })
     window.onbeforeunload = null
 
     setIsTriggered(false)
@@ -177,7 +180,7 @@ export function useExitIntent(props: ExitIntentSettings | void = {}) {
       }
 
       if (desktop?.triggerOnMouseLeave) {
-        document.addEventListener('mouseleave', handleExitIntent)
+        document.body.addEventListener('mouseleave', handleExitIntent)
       }
 
       if (desktop?.useBeforeUnload) {
@@ -193,7 +196,7 @@ export function useExitIntent(props: ExitIntentSettings | void = {}) {
       return () => {
         abort()
         removeIdleEvents(execute)
-        document.removeEventListener('mouseleave', handleExitIntent)
+        document.body.removeEventListener('mouseleave', handleExitIntent)
       }
     }
   })
