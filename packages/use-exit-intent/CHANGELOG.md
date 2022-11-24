@@ -1,5 +1,11 @@
 # use-exit-intent
 
+## 1.0.6
+
+### Patch Changes
+
+- fix an issue where hook was not trigerred on firefox and safari
+
 ## 1.0.5
 
 ### Patch Changes
