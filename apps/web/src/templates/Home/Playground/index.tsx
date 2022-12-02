@@ -42,6 +42,10 @@ export function PlaygroundSection() {
     registerHandler,
     willBeTriggered,
   } = useExitIntent({
+    cookie: {
+      key: 'use-exit-intent',
+    },
+
     desktop: {
       delayInSecondsToTrigger: 1,
       triggerOnIdle: false,

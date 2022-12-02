@@ -25,6 +25,11 @@ export function useExitIntent(props: ExitIntentSettings | void = {}) {
   const initialSettings: InternalExitIntentSettings = {
     ...defaultSettings,
 
+    cookie: {
+      ...defaultSettings.cookie,
+      ...props?.cookie,
+    },
+
     desktop: {
       ...defaultSettings.desktop,
       ...props?.desktop,

@@ -2,9 +2,9 @@ name: Release GH Page
 
 on:
   workflow_dispatch:
-  release:
+  label:
     types:
-      - "published"
+      - created
 
 permissions:
   contents: read

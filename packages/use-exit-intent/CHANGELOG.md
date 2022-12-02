@@ -1,5 +1,11 @@
 # use-exit-intent
 
+## 1.0.7
+
+### Patch Changes
+
+- fix an issue where provided cookie settings were not being applied
+
 ## 1.0.6
 
 ### Patch Changes
