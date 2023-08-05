@@ -74,7 +74,7 @@ export function InstallationBox() {
                   </PackageButton>
                 </li>
 
-                {!isLastItem && <Separator />}
+                {!isLastItem && <Separator aria-hidden />}
               </Fragment>
             )
           }
