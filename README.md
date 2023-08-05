@@ -36,13 +36,19 @@
 
 # 🐠 Installation
 In your terminal, run:
-```bash
-yarn add use-exit-intent
 
-# OR
-
-npm i use-exit-intent
-```
+- npm
+    ```bash
+    npm i use-exit-intent
+    ```
+- pnpm
+    ```bash
+    pnpm i use-exit-intent
+    ```
+- yarn
+    ```bash
+    yarn add use-exit-intent
+    ```
 
 # 🐠 Usage
 
