@@ -70,8 +70,8 @@ export function App() {
 ```
 
 # 🐠 Knowledge
-- [Docs](https://daltonmenezes.github.io/use-exit-intent/docs/getting-started/overview)
-- [Playground](https://daltonmenezes.github.io/use-exit-intent/#playground)
+- [Docs](https://use-exit-intent.daltonmenezes.com/docs/getting-started/overview)
+- [Playground](https://use-exit-intent.daltonmenezes.com/#playground)
 
 
 # 🐠 Contributing
