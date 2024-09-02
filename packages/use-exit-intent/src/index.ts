@@ -164,7 +164,6 @@ export function useExitIntent(props: ExitIntentSettings | void = {}) {
       }
 
       if (isMobile() && mobile?.triggerOnIdle) {
-        removeIdleEvents(execute)
         createIdleEvents(execute)
       }
 
