@@ -46,6 +46,7 @@ export function useExitIntent(props: ExitIntentSettings | void = {}) {
 
   const [isTriggered, setIsTriggered] = useState(false)
   const [isUnsubscribed, setIsUnsubscribed] = useState(false)
+  const [isMouseLeaveDetectionEnabled, setIsMouseLeaveDetectionEnabled] = useState(false)
 
   const handlers = useRef<ExitIntentHandler[]>([]).current
   const shouldNotTrigger = useRef<boolean>(false)
@@ -185,7 +186,24 @@ export function useExitIntent(props: ExitIntentSettings | void = {}) {
       }
 
       if (desktop?.triggerOnMouseLeave) {
-        document.body.addEventListener('mouseleave', handleExitIntent)
+        const handleMouseLeave = () => {
+          if (shouldNotTrigger.current || !isMouseLeaveDetectionEnabled) return
+          handleExitIntent()
+        }
+        document.body.addEventListener('mouseleave', handleMouseLeave)
+
+        // Set a timeout to enable mouse leave detection after the specified delay
+        const mouseLeaveDetectionTimer = setTimeout(() => {
+          setIsMouseLeaveDetectionEnabled(true)
+        }, secondsToMiliseconds(desktop.mouseLeaveDelayInSeconds!))
+
+
+        return () => {
+          abort()
+          removeIdleEvents(execute)
+          document.body.removeEventListener('mouseleave', handleMouseLeave)
+          clearTimeout(mouseLeaveDetectionTimer)
+        }
       }
 
       if (desktop?.useBeforeUnload) {

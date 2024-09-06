@@ -12,6 +12,7 @@ export interface DesktopOptions {
   triggerOnMouseLeave?: boolean
   delayInSecondsToTrigger?: number
   useBeforeUnload?: boolean
+  mouseLeaveDelayInSeconds?: number
 }
 
 export interface MobileOptions {
