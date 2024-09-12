@@ -171,7 +171,7 @@ export function PlaygroundSection() {
                 }}
               />
             </Label>
-            
+
             <Label>
               useBeforeUnload:
               <input
