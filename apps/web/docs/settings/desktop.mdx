@@ -10,7 +10,8 @@ title: desktop
 
 - **triggerOnIdle** - if true, the handlers will be triggered when the user is idle
 - **triggerOnMouseLeave** - if true, the handlers will be triggered when the user is about to leave your website
-- **delayInSecondsToTrigger** - delay in seconds to trigger the exit intent handlers. **triggerOnIdle** **must be true**!
+- **delayInSecondsToTrigger** - delay in seconds to trigger the exit intent handlers on idle. **triggerOnIdle** **must be true**!
+- **mouseLeaveDelayInSeconds** - delay in seconds to trigger the exit intent handlers on mouse leave. **triggerOnMouseLeave** **must be true**!
 - **useBeforeUnload** - if true, the handlers will be triggered when the user is about to leave your website. **UI will be blocked until the user cancels the action**.
 
 <br/>
@@ -18,6 +19,7 @@ title: desktop
 ## Default
 ```tsx
 delayInSecondsToTrigger: 10
+mouseLeaveDelayInSeconds: 5
 triggerOnMouseLeave: true
 triggerOnIdle: false
 useBeforeUnload: false
@@ -30,6 +32,7 @@ useBeforeUnload: false
 useExitIntent({
   desktop: {
     delayInSecondsToTrigger: 10,
+    mouseLeaveDelayInSeconds: 5,
     triggerOnMouseLeave: true,
     triggerOnIdle: false
     useBeforeUnload: false

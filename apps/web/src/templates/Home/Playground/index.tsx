@@ -158,6 +158,21 @@ export function PlaygroundSection() {
             </Label>
 
             <Label>
+              mouseLeaveDelayInSeconds:
+              <input
+                defaultValue={settings?.desktop?.mouseLeaveDelayInSeconds}
+                type="number"
+                onChange={({ target }) => {
+                  updateSettings({
+                    desktop: {
+                      mouseLeaveDelayInSeconds: target.valueAsNumber,
+                    },
+                  })
+                }}
+              />
+            </Label>
+
+            <Label>
               useBeforeUnload:
               <input
                 checked={settings?.desktop?.useBeforeUnload}
