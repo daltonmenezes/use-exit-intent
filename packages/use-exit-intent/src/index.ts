@@ -46,7 +46,6 @@ export function useExitIntent(props: ExitIntentSettings | void = {}) {
 
   const [isTriggered, setIsTriggered] = useState(false)
   const [isUnsubscribed, setIsUnsubscribed] = useState(false)
-  const [isMouseLeaveDetectionEnabled, setIsMouseLeaveDetectionEnabled] = useState(false)
 
   const handlers = useRef<ExitIntentHandler[]>([]).current
   const shouldNotTrigger = useRef<boolean>(false)
