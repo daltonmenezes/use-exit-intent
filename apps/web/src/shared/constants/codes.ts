@@ -35,7 +35,8 @@ export const codes = {
           "triggerOnIdle": false,
           "useBeforeUnload": false,
           "triggerOnMouseLeave": true,
-          "delayInSecondsToTrigger": 10
+          "delayInSecondsToTrigger": 10,
+          "mouseLeaveDelayInSeconds": 5
         },
 
         "mobile": {

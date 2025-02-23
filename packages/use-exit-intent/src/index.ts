@@ -179,12 +179,21 @@ export function useExitIntent(props: ExitIntentSettings | void = {}) {
         secondsToMiliseconds(desktop?.delayInSecondsToTrigger!)
       )
 
+      let mouseLeaveTimer: ReturnType<typeof setTimeout>
+
+      const handleMouseLeave = () => {
+        if (shouldNotTrigger.current) return
+        handleExitIntent()
+      }
+
       if (desktop?.triggerOnIdle) {
         createIdleEvents(execute)
       }
 
       if (desktop?.triggerOnMouseLeave) {
-        document.body.addEventListener('mouseleave', handleExitIntent)
+        mouseLeaveTimer = setTimeout(() => {
+          document.body.addEventListener('mouseleave', handleMouseLeave)
+        }, secondsToMiliseconds(desktop.mouseLeaveDelayInSeconds!))
       }
 
       if (desktop?.useBeforeUnload) {
@@ -199,8 +208,10 @@ export function useExitIntent(props: ExitIntentSettings | void = {}) {
 
       return () => {
         abort()
-        removeIdleEvents(execute)
-        document.body.removeEventListener('mouseleave', handleExitIntent)
+        clearTimeout(mouseLeaveTimer)
+        document.body.removeEventListener('mouseleave', handleMouseLeave),
+          removeIdleEvents(execute),
+          (window.onbeforeunload = null)
       }
     }
   })

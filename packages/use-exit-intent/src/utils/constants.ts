@@ -12,12 +12,12 @@ export const defaultSettings: InternalExitIntentSettings = {
     daysToExpire: 30,
     key: 'exit-intent',
   },
-
   desktop: {
     triggerOnIdle: false,
     useBeforeUnload: false,
     triggerOnMouseLeave: true,
     delayInSecondsToTrigger: 10,
+    mouseLeaveDelayInSeconds: 5,
   },
 
   mobile: {
