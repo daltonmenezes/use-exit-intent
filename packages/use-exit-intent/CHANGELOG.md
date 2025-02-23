@@ -1,5 +1,11 @@
 # use-exit-intent
 
+## 1.1.0
+
+### Minor Changes
+
+- add mouseLeaveDelayInSeconds
+
 ## 1.0.7
 
 ### Patch Changes
